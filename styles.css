@@ -1,0 +1,123 @@
+/* Basic reset and styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+body {
+    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20231008/pngtree-concept-meeting-to-do-list-organizing-tasks-with-sticky-notes-3d-image_13576578.png'); /* Replace with your background image URL */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.todo-form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+input {
+    width: calc(100% - 120px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    width: 100px;
+    padding: 10px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f4f4f4;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+li.completed {
+    text-decoration: line-through;
+    background: #e0e0e0;
+}
+
+button.edit-btn, button.delete-btn {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button.edit-btn {
+    background-color: #ffa500;
+    color: white;
+}
+
+button.edit-btn:hover {
+    background-color: #e69500;
+}
+
+button.delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+button.delete-btn:hover {
+    background-color: #c62828;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .todo-form {
+        flex-direction: column;
+    }
+
+    input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
